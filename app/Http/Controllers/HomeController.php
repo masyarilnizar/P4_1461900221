@@ -61,6 +61,23 @@ class HomeController extends Controller
                 return view('home0221',['home' => $home]);
         }
 
+
+        public function buku(){
+            $buku = DB::table('buku')->get();
+            
+            return view('buku0221',['buku' => $buku]);
+        }
+        public function jenis(){
+            $jenis = DB::table('jenis_buku')->get();
+            
+            return view('jenis0221',['jenis' => $jenis]);
+        }
+        public function rakbuku(){
+            $rakbuku = DB::table('rak_buku')->get();
+            
+            return view('rakbuku0221',['rakbuku' => $rakbuku]);
+        }
+
         // public function index()
         // {
         //     //Menampilkan data

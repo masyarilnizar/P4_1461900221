@@ -4,14 +4,14 @@
 
 
 <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
-    <a class="navbar-brand" href="#">1461900221</a>
+    <a class="navbar-brand" href="#">DATA BUKU</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/home0221">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/buku0221" target="_blank">Buku</a>
@@ -56,18 +56,17 @@
         }
     </style>
 </head>
-
 <body>
     <div style="overflow-x: auto">
           <table>
               <thead>
                   <tr>
                       <th>No Buku</th>
-                      <th>No Jenis Buku</th>
+                      
                       <th>Judul</th>
-                      <th>Jenis</th>
+                      
                       <th>Tahun Terbit</th>
-                      <th>Action</th>
+                      
 
 
                       
@@ -75,17 +74,16 @@
               </thead>
               <tbody>
                 
-                @foreach ($home as $Home)
+                @foreach ($buku as $Buku)
                   <tr>
-                      <td>{{ $Home->id_buku }}</td>
-                      <td>{{ $Home->id_jenis }}</td>
-                      <td>{{ $Home->judul }}</td>
-                      <td>{{ $Home->jenis }}</td>
-                      <td>{{ $Home->tahun_terbit }}</td>
+                      <td>{{ $Buku->id }}</td>
+                      
+                      <td>{{ $Buku->judul }}</td>
+                      
+                      <td>{{ $Buku->tahun_terbit }}</td>
                       
                       
-                      <td><a href="#">Edit</a> | 
-                      <a href="#">Hapus</a></td>
+                      
                       
                   </tr>
                 @endforeach
@@ -95,5 +93,3 @@
     </div>
 </body>
 
-<br><a href="{{url('/export0221')}}"><button type="button" class="btn btn-outline-dark">Export</button></a>
-<br/>

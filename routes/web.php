@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 Route::get('home0221', [HomeController::class, 'home']);
 Route::get('export0221', [HomeController::class, 'export']);
+Route::get('buku0221', [HomeController::class, 'buku']);
+Route::get('jenis0221', [HomeController::class, 'jenis']);
